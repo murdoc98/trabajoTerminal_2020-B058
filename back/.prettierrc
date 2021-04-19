@@ -1,0 +1,7 @@
+{
+    "semi": false, // Semicolon at the end of every line
+    "tabWidth": 2, // Length of each tab
+    "printWidth": 100, // Max length per line
+    "singleQuote": true, // It can be more specific xd
+    "trailingComma": "none" // Comma in objects or multiline arrays
+}

@@ -1,0 +1,15 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint", // Add prettier rules to eslint
+        "plugin:prettier/recommended" // Add plugin that integrates elsint and prettier
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        // Add extra ts rules if needed
+    }
+}

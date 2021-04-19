@@ -1,0 +1,8 @@
+# For back dir
+back/node_modules
+back/dist
+back/package-lock.json
+# For front dir
+front/node_modules
+front/dist
+front/package-lock.json

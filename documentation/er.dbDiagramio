@@ -40,8 +40,41 @@ table Evaluacion {
   bloqueId int [ref: > Bloque.id]
   alumnoId int [ref: - Alumno.id]
   grupoId int [ref: - Grupo.id]
+  problemaId int [ref: < Problema.id]
 }
 
 table Bloque {
   id int [pk, increment]
 } 
+
+
+table Problema {
+  id int [pk, increment]
+  tema varchar 
+  dificultad int
+  operadores varchar
+  numeroOperaciones int
+  esComun int
+  nivelRedaccion int
+  contenido text
+  respuesta text
+  procedimiento text
+  tagId int
+  imagenid int
+}
+table Imagen {
+  id int [pk, increment]
+  url varchar
+}
+table Tag {
+  id int [pk, increment]
+  name varchar
+}
+
+
+
+
+
+Ref: "Problema"."imagenid" < "Imagen"."id"
+
+Ref: "Problema"."tagId" < "Tag"."id"

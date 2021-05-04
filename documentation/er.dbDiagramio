@@ -1,0 +1,47 @@
+// TT Base de datos
+table Usuario {
+  id uuid [pk, unique]
+  email varchar
+  password varchar
+  token varchar
+}
+table Alumno {
+  id int [pk, increment]
+  userId int [ref: - Usuario.id]
+  grupoId int [ref: - Grupo.id]
+  nombre varchar
+  apellidoP varchar
+  apellidoM varchar
+}
+
+table Profesor {
+  id int [pk, increment]
+  userId int [ref: - Usuario.id]
+  nombre varchar
+  apellidoP varchar
+  apellidoM varchar
+}
+table Escuela {
+  id int [pk, increment]
+  name varchar
+  clave varchar
+  
+}
+table Grupo {
+  id int [pk, increment]
+  escuelaId int [ref: > Escuela.id]
+  profesor int [ref: - Profesor.id]
+  periodo varchar
+}
+
+table Evaluacion {
+  id int [pk, increment]
+  tipo bool
+  bloqueId int [ref: > Bloque.id]
+  alumnoId int [ref: - Alumno.id]
+  grupoId int [ref: - Grupo.id]
+}
+
+table Bloque {
+  id int [pk, increment]
+} 

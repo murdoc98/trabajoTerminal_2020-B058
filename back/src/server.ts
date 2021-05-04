@@ -1,11 +1,12 @@
-import express from 'express';
+import express from 'express'
 
-const server = express();
+const server = express()
 
 server.get('/', (req, res) => {
-    res.send('awa')
+  console.log(req.body)
+  res.send('awa')
 })
 
 server.listen(3000, () => {
-    console.log('Server running owo')
+  console.log('Server running owo')
 })

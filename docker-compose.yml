@@ -1,0 +1,14 @@
+# docker-compose configuration file
+version: '3.8'
+services:
+  database:
+    image: 'postgres'
+    container_name: '2020-B058'
+    ports:
+      - '5432:5000'
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: testdb
+    volumes:
+      - ./database:/var/lib/postgresql/data/
